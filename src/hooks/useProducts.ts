@@ -1,7 +1,7 @@
 import { useInfiniteQuery, useQuery } from "@tanstack/react-query";
 import { getProducts, getCategories } from "../api/products";
 
-const PAGE_LIMIT = 12;
+const PAGE_LIMIT = 18;
 
 export const useInfiniteProducts = (filters?: { title?: string; categoryId?: number }) =>
     useInfiniteQuery({

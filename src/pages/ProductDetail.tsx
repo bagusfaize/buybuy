@@ -57,7 +57,7 @@ export default function ProductDetail() {
   const image = product.images?.[0] ?? product.image ?? "";
 
   return (
-    <div>
+    <div className="min-h-screen">
       <div className="flex gap-1 items-center text-sm font-semibold text-slate-700">
         <Link to={"/"}>
           Product List
@@ -81,17 +81,17 @@ export default function ProductDetail() {
               {product.title}
             </h1>
             <p className="mt-4 text-3xl font-bold text-gray-900">
-              <span className="text-indigo-600">
+              <span className="text-blue-600">
                 ${product.price}
               </span>
             </p>
           </div>
           <div className="mt-6">
             <div className="mb-3">
-              <p className="text-sm font-medium text-gray-900">Product ID:</p>
+              {/* <p className="text-sm font-medium text-gray-900">Product ID:</p>
               <span className="text-base text-gray-700">
                 {product.id}
-              </span>
+              </span> */}
             </div>
             <div className="mb-3">
               <p className="text-sm font-medium text-gray-900">Product Description:</p>
@@ -119,7 +119,7 @@ export default function ProductDetail() {
               <button
                 type="button"
                 onClick={handleAddToCart}
-                className="w-full bg-indigo-600 border border-transparent rounded-lg py-3 flex items-center justify-center text-lg font-semibold text-white hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-500 focus:ring-opacity-50 transition-all duration-200 shadow-xl shadow-indigo-200 cursor-pointer"
+                className="w-full bg-blue-600 border border-transparent rounded-lg py-3 flex items-center justify-center text-lg font-semibold text-white hover:bg-blue-700 focus:outline-none focus:ring-4 focus:ring-blue-500 focus:ring-opacity-50 transition-all duration-200 shadow-xl shadow-blue-200 cursor-pointer"
               >
                 <GoPlus className="mr-2" />
                 Add to Cart

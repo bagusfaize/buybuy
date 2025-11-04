@@ -27,7 +27,7 @@ export default function QuantityButton({
             <button
                 onClick={() => onDecrement(productId)}
                 className={`
-                    border border-indigo-200 text-indigo-600 hover:bg-indigo-50 transition-colors duration-150 flex items-center justify-center cursor-pointer
+                    border border-blue-200 text-blue-600 hover:bg-blue-50 transition-colors duration-150 flex items-center justify-center cursor-pointer
                     ${buttonBaseClasses}
                 `}
             >
@@ -42,7 +42,7 @@ export default function QuantityButton({
             <button
                 onClick={() => onIncrement(productId)}
                 className={`
-                    bg-indigo-600 text-white hover:bg-indigo-700 transition-colors duration-150 flex items-center justify-center cursor-pointer
+                    bg-blue-600 text-white hover:bg-blue-700 transition-colors duration-150 flex items-center justify-center cursor-pointer
                     ${buttonBaseClasses}
                 `}
             >

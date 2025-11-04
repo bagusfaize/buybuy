@@ -1,15 +1,16 @@
 import { Link } from "react-router-dom";
 import type { Product } from "../types/types";
+import { FaShippingFast, FaStar } from "react-icons/fa";
 
 export default function ProductCard({ product }: { product: Product }) {
     const image = product.images?.[0] ?? product.image ?? "";
 
     return (
-        <Link 
+        <Link
             to={`/product/${product.id}`}
-            className="bg-white rounded-xl shadow hover:shadow-lg transition-shadow overflow-hidden flex flex-col group"
+            className="bg-white rounded-xl shadow overflow-hidden flex flex-col group hover:shadow-md hover:scale-[1.01] transition-all"
         >
-            <div className="relative aspect-square overflow-hidden p-4 bg-gray-50 flex items-center justify-center">
+            <div className="relative aspect-square overflow-hidden bg-gray-50 flex items-center justify-center">
                 <img
                     src={image}
                     alt={product.title}
@@ -17,21 +18,28 @@ export default function ProductCard({ product }: { product: Product }) {
                 />
             </div>
 
-            <div className="p-5 flex flex-col grow">
-                <h3 className="text-lg font-semibold text-gray-800 line-clamp-2 mb-2 capitalize">
+            <div className="px-3 py-4 flex flex-col grow">
+                <h3 className="font-semibold text-gray-800 capitalize truncate">
                     {product.title}
                 </h3>
-
-                <div className="mt-auto flex items-center justify-between pt-3 border-t border-gray-100">
-                    <span className="text-xl font-bold">
-                        ${product.price}
+                <div className="text-md font-bold mt-2 text-blue-600">
+                    ${product.price}
+                </div>
+                <div className="flex items-center mt-2">
+                    <span className="flex items-center space-x-1">
+                        <span><FaStar className=" text-xs text-yellow-400" /></span>
+                        <span className="text-xs text-gray-500">4.5</span>
                     </span>
-
-                    <button
-                        className="text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-lg px-4 py-2 shadow-md transition-colors duration-200"
-                    >
-                        View Product
-                    </button>
+                    <span className="text-sm text-gray-400 mx-1">•</span>
+                    <span className="text-xs text-gray-500">
+                        75 sold
+                    </span>
+                </div>
+                <div className="flex items-center mt-1">
+                    <span className="flex items-center space-x-1">
+                        <span><FaShippingFast className=" text-xs text-blue-600" /></span>
+                        <span className="text-xs font-medium">FREE SHIPPING</span>
+                    </span>
                 </div>
             </div>
         </Link>

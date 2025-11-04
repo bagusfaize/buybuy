@@ -36,7 +36,7 @@ export default function CartPage() {
                     <div className="grow pr-4">
                       <h3 className="text-lg font-semibold text-gray-900 line-clamp-2">{item.product.title}</h3>
                       <p className="text-sm text-gray-600 mt-1">
-                        <span className="text-indigo-600 text-lg font-medium">${item.product.price.toFixed(2)}</span>
+                        <span className="text-blue-600 text-lg font-medium">${item.product.price.toFixed(2)}</span>
                       </p>
                     </div>
 
@@ -70,12 +70,12 @@ export default function CartPage() {
 
               <div className="flex justify-between items-center my-8">
                 <span className="text-medium font-medium text-gray-600">Order Total</span>
-                <span className="text-xl font-bold text-indigo-600">${subtotalPrice.toFixed(2)}</span>
+                <span className="text-xl font-bold text-blue-600">${subtotalPrice.toFixed(2)}</span>
               </div>
 
               <button
                 disabled={cartItems.length === 0}
-                className="w-full mt-6 py-3 bg-indigo-600 text-white text-lg font-semibold rounded-lg hover:bg-indigo-700 transition-colors disabled:bg-slate-300 cursor-pointer"
+                className="w-full mt-6 py-3 bg-blue-600 text-white text-lg font-semibold rounded-lg hover:bg-blue-700 transition-colors disabled:bg-slate-300 cursor-pointer"
               >
                 Checkout
               </button>
@@ -91,17 +91,17 @@ export default function CartPage() {
 const EmptyCartState = () => {
   return (
     <div className="flex flex-col items-center justify-center max-w-lg mx-auto my-15">
-      <div className="p-4 bg-indigo-100 rounded-full mb-3">
-        <FiShoppingBag className="h-5 w-5 text-indigo-600" />
+      <div className="p-4 bg-blue-100 rounded-full mb-3">
+        <FiShoppingBag className="h-5 w-5 text-blue-600" />
       </div>
       <h2 className="text-medium font-medium text-gray-900">
         Your Shopping Cart is Empty
       </h2>
       <Link
         to="/"
-        className="mt-3 px-5 py-2 bg-indigo-600 text-white font-medium rounded-lg hover:bg-indigo-700 text-sm"
+        className="mt-3 px-5 py-2 bg-blue-600 text-white font-medium rounded-lg hover:bg-blue-700 text-sm"
       >
-        Exploer Product
+        Explore Products
       </Link>
     </div>
   )
