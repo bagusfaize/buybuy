@@ -7,6 +7,7 @@ import {
 import ProductCard from "../components/ProductCard";
 import ProductFilter from "../components/ProductFilter";
 import { FiSearch } from "react-icons/fi";
+import HeroBanner from "../components/HeroBanner";
 
 export default function ProductList() {
     const [selectedCategory, setSelectedCategory] = useState<number|null>(null);
@@ -39,7 +40,17 @@ export default function ProductList() {
     return (
         <div>
 
-            {/* Product Filter */}
+            <HeroBanner />
+
+            {isLoading && <LoadingState />}
+
+            {/* Product List */}
+            <div className="mt-10 mb-5">
+                <h1 className="text-xl font-bold text-gray-800 tracking-tight pb-2 inline-block">
+                    All Products
+                </h1>
+            </div>
+                        {/* Product Filter */}
             <ProductFilter
                 categories={categories}
                 onCategoryChange={setSelectedCategory}
@@ -49,11 +60,7 @@ export default function ProductList() {
                 onSearch={handleSearch}
                 onClear={handleClearSearch}
             />
-
-            {isLoading && <LoadingState />}
-
-            {/* Product List */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-5 my-7">
+            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 my-7">
                 {displayedProducts.map((p) => (
                     <ProductCard key={p.id} product={p} />
                 ))}
@@ -64,7 +71,7 @@ export default function ProductList() {
                     <button
                         onClick={() => fetchNextPage()}
                         disabled={isFetchingNextPage}
-                        className="bg-indigo-600 text-white px-4 py-2 rounded-lg disabled:opacity-50"
+                        className="bg-blue-600 text-white px-4 py-2 rounded-lg disabled:opacity-50"
                     >
                         {isFetchingNextPage ? "Loading..." : "Load More"}
                     </button>
@@ -79,8 +86,8 @@ export default function ProductList() {
 
 const LoadingState = () => {
     return (
-        <div className="flex items-center justify-center p-8 text-indigo-700">
-            <div className="animate-spin rounded-full h-8 w-8 border-4 border-t-4 border-indigo-500 border-t-transparent mr-3" role="status">
+        <div className="flex items-center justify-center p-8 text-blue-700">
+            <div className="animate-spin rounded-full h-8 w-8 border-4 border-t-4 border-blue-500 border-t-transparent mr-3" role="status">
                 <span className="sr-only">Loading...</span>
             </div>
             <p className="text-lg font-medium">Loading products...</p>
