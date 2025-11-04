@@ -60,7 +60,7 @@ export default function ProductList() {
                 onSearch={handleSearch}
                 onClear={handleClearSearch}
             />
-            <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 my-7">
+            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 my-7">
                 {displayedProducts.map((p) => (
                     <ProductCard key={p.id} product={p} />
                 ))}
