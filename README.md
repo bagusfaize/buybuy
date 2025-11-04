@@ -1,9 +1,9 @@
-# LGQ Shop Explorer
+# Buybuy E-commerce
 
 ### Live Demo
 The application is deployed on Vercel:
 
-**[https://lgq-shop-explorer.vercel.app/](https://lgq-shop-explorer.vercel.app/)**
+**[https://buybuy-commerce.vercel.app//](https://buybuy-commerce.vercel.app/)**
 
 ***
 
@@ -12,13 +12,14 @@ The application is deployed on Vercel:
 * Vite
 * React Router
 * TanStack Query
-* Zustand (Client-side State Management)
+* Zustand
 * TailwindCSS
+* React Responsive Carousel
 
 ### Implementation
 
 * **API Data:** Products are fetched using **TanStack Query** from the **Platzi Fake Store API**.
-* **Cart State:** The optimistic update with Tanstack Query **not implemented** since I can't find dedicated cart API on Fake Store API Docs. The cart state managed on the **client side** using **Zustand**, with state persisted across reloads using zustand middleware.
+* **Cart State:** The cart state managed on the **client side** using **Zustand**, with state persisted across reloads using zustand middleware.
 
 ***
 
@@ -28,11 +29,11 @@ Follow these steps to get a copy of the project running on your local machine.
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/bagusfaize/lgq-shop-explorer.git
+    git clone https://github.com/bagusfaize/buybuy.git
     ```
 2.  **Navigate to the project directory:**
     ```bash
-    cd lgq-shop-explorer
+    cd buybuy
     ```
 3.  **Install dependencies** using npm:
     ```bash
