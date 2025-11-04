@@ -29,13 +29,15 @@ export default function HeroBanner() {
                 showThumbs={false}
                 autoPlay
                 infiniteLoop
+                // centerMode
+                // centerSlidePercentage={90}
             >
                 {slides.map((slide, index) => (
-                    <div key={index}>
+                    <div key={index} className={isTabletOrMobile ? "mx-1" : "mx-2"}>
                         <img
                             src={isTabletOrMobile ? slide.mobileBanner : slide.desktopBanner}
                             alt={slide.legend}
-                            className="rounded-xl"
+                            className="rounded-xl shadow-md"
                         />
                     </div>
                 ))}
