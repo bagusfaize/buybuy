@@ -42,12 +42,10 @@ export default function ProductList() {
 
             <HeroBanner />
 
-            {isLoading && <LoadingState />}
-
             {/* Product List */}
             <div className="mt-10 mb-5">
                 <h1 className="text-xl font-bold text-gray-800 tracking-tight pb-2 inline-block">
-                    All Products
+                    Explore
                 </h1>
             </div>
                         {/* Product Filter */}
@@ -60,6 +58,9 @@ export default function ProductList() {
                 onSearch={handleSearch}
                 onClear={handleClearSearch}
             />
+
+            {isLoading && <LoadingState />}
+
             <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-5 my-7">
                 {displayedProducts.map((p) => (
                     <ProductCard key={p.id} product={p} />
@@ -86,7 +87,7 @@ export default function ProductList() {
 
 const LoadingState = () => {
     return (
-        <div className="flex items-center justify-center p-8 text-blue-700">
+        <div className="flex items-center justify-center p-8 text-blue-700 my-7">
             <div className="animate-spin rounded-full h-8 w-8 border-4 border-t-4 border-blue-500 border-t-transparent mr-3" role="status">
                 <span className="sr-only">Loading...</span>
             </div>

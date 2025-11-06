@@ -33,7 +33,7 @@ export default function HeroBanner() {
                 // centerSlidePercentage={90}
             >
                 {slides.map((slide, index) => (
-                    <div key={index} className={isTabletOrMobile ? "mx-1" : "mx-2"}>
+                    <div key={index}>
                         <img
                             src={isTabletOrMobile ? slide.mobileBanner : slide.desktopBanner}
                             alt={slide.legend}

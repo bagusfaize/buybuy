@@ -22,7 +22,7 @@ export default function ProductCard({ product }: { product: Product }) {
                 <h3 className="font-semibold text-gray-800 capitalize truncate">
                     {product.title}
                 </h3>
-                <div className="text-md font-bold mt-2 text-blue-600">
+                <div className="text-md font-bold text-blue-600">
                     ${product.price}
                 </div>
                 <div className="flex items-center mt-2">

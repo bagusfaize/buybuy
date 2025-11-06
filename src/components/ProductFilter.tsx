@@ -49,7 +49,7 @@ export default function ProductFilter({
                     <select
                         value={selectedCategoryId === null ? "" : selectedCategoryId}
                         onChange={handleCategorySelect}
-                        className="w-[150px] px-2 py-3 bg-white border border-gray-300 rounded-xl text-gray-500 focus:ring-3 focus:ring-blue-300 transition-all shadow-sm outline-none"
+                        className="w-[150px] px-2 py-3 text-sm bg-white border border-gray-300 rounded-xl text-gray-500 focus:ring-3 focus:ring-blue-300 transition-all shadow-sm outline-none"
                     >
                         <option value="">All Categories</option>
                         
@@ -66,7 +66,7 @@ export default function ProductFilter({
                     placeholder="Search..."
                     value={value}
                     onChange={(e) => onChange(e.target.value)}
-                    className="w-full px-5 py-3 bg-white border border-gray-300 rounded-xl text-gray-800 focus:ring-3 focus:ring-blue-300 transition-all shadow-sm outline-none"
+                    className="w-full text-sm px-5 py-3 bg-white border border-gray-300 rounded-xl text-gray-800 focus:ring-3 focus:ring-blue-300 transition-all shadow-sm outline-none"
                 />
                 {value && (
                     <button
@@ -81,7 +81,7 @@ export default function ProductFilter({
 
                 <button
                     type="submit"
-                    className="absolute right-0 top-0 bottom-0 px-4 py-2 bg-blue-600 text-white rounded-r-xl hover:bg-blue-700 transition-colors duration-200 shadow-md"
+                    className="absolute right-0 top-0 bottom-0 px-4 py-2 cursor-pointer bg-blue-600 text-white rounded-r-xl hover:bg-blue-700 transition-colors duration-200 shadow-md"
                 >
                     <FiSearch className="h-5 w-5" />
                 </button>
